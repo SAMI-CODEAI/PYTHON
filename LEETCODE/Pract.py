@@ -1,96 +1,75 @@
-from collections import deque
-import itertools
+import os
+import zlib
+import tkinter as tk
+from tkinter import filedialog, messagebox
 
-# Function to find the shortest path
-def gsp(placementlelo, N):
-    start = None
-    end = None
-    for i in range(N):
-        for j in range(N):
-            if placementlelo[i][j] == 'S':
-                start = (i, j)
-            elif placementlelo[i][j] == 'D':
-                end = (i, j)
+def compress_file(input_file, output_file):
+    """Compress a file using zlib"""
+    try:
+        with open(input_file, 'rb') as f_in:
+            with open(output_file, 'wb') as f_out:
+                f_out.write(zlib.compress(f_in.read()))
+        return True
+    except Exception as e:
+        messagebox.showerror("Error", f"Error compressing file: {e}")
+        return False
 
-    if not start or not end:
-        return float('inf')  # Return a large number if start or end is not found
+def decompress_file(input_file, output_file):
+    """Decompress a file using zlib"""
+    try:
+        with open(input_file, 'rb') as f_in:
+            with open(output_file, 'wb') as f_out:
+                f_out.write(zlib.decompress(f_in.read()))
+        return True
+    except Exception as e:
+        messagebox.showerror("Error", f"Error decompressing file: {e}")
+        return False
 
-    queue = deque([(start, 0)])  # BFS setup
-    visited = {start}
+def select_file():
+    return filedialog.askopenfilename()
 
-    while queue:
-        (x, y), dist = queue.popleft()
-        if placementlelo[x][y] == 'D':
-            return dist
+def save_file():
+    return filedialog.asksaveasfilename()
 
-        for nx, ny in [(x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)]:
-            if 0 <= nx < N and 0 <= ny < N and (nx, ny) not in visited and placementlelo[nx][ny] != 'L':
-                visited.add((nx, ny))
-                queue.append(((nx, ny), dist + 1))
+def compress_action():
+    input_file = select_file()
+    if not input_file:
+        return
+    output_file = save_file()
+    if not output_file:
+        return
 
-    return float('inf')  # If no path is found, return an infinite distance
+    if compress_file(input_file, output_file):
+        messagebox.showinfo("Success", "File compressed successfully.")
 
-# Function to get individual sheets
-def getSh(placementlelo, N, M):
-    shts = []
-    for i in range(0, N, M):
-        for j in range(0, N, M):
-            sheet = []
-            for x in range(M):
-                row = []
-                for y in range(M):
-                    row.append(placementlelo[i + x][j + y])
-                sheet.append(row)
-            shts.append(sheet)
-    return shts
 
-# Function to arrange the grid from the sheets
-def makeGr(arrNT, shts, N, M):
-    placementlelo = [["" for _ in range(N)] for _ in range(N)]
-    numSht = N // M
+def decompress_action():
+    input_file = select_file()
+    if not input_file:
+        return
+    output_file = save_file()
+    if not output_file:
+        return
 
-    for idx, sidx in enumerate(arrNT):
-        sheet = shts[sidx]
-        bi = (idx // numSht) * M
-        bj = (idx % numSht) * M
+    if decompress_file(input_file, output_file):
+        messagebox.showinfo("Success", "File decompressed successfully.")
 
-        for i in range(M):
-            for j in range(M):
-                placementlelo[bi + i][bj + j] = sheet[i][j]
+def main():
+    root = tk.Tk()
+    root.title("File Compression Tool")
 
-    return placementlelo
+    tk.Label(root, text="File Compression Tool", font=("Arial", 16)).pack(pady=10)
 
-# Main function to solve the problem
-def solve():
-    N, M = map(int, input().split())
-    orgGrid = []
-    for _ in range(N):
-        orgGrid.append(list(input().strip()))
+    compress_button = tk.Button(root, text="Compress File", command=compress_action, width=20, bg="lightblue")
+    compress_button.pack(pady=5)
 
-    # Extract sheets from the grid
-    shts = getSh(orgGrid, N, M)
-    numSht = (N // M) ** 2
+    decompress_button = tk.Button(root, text="Decompress File", command=decompress_action, width=20, bg="lightgreen")
+    decompress_button.pack(pady=5)
 
-    sst = dst = None
-    for i, sheet in enumerate(shts):
-        for row in sheet:
-            if 'S' in row:
-                sst = i
-            if 'D' in row:
-                dst = i
+    exit_button = tk.Button(root, text="Exit", command=root.quit, width=20, bg="red")
+    exit_button.pack(pady=20)
 
-    min_dist = float('inf')
-    nums = list(range(numSht))
-    nums.remove(sst)
-    nums.remove(dst)
-
-    # Try all permutations of the other sheets
-    for midPerm in itertools.permutations(nums):
-        arrNT = [sst] + list(midPerm) + [dst]
-        placementlelo = makeGr(arrNT, shts, N, M)
-        min_dist = min(min_dist, gsp(placementlelo, N))
-
-    return min_dist
+    root.mainloop()
 
 if __name__ == "__main__":
-    print(solve())
+    main()
