@@ -1,16 +1,37 @@
-class Solution(object):
-    def maxArea(self, H):
-        ans, i, j = 0, 0, len(H)-1
-        while i<j:
-            if H[i] <= H[j]:
-                res = H[i] * (j - i)
-                i += 1
-            else:
-                res = H[j] * (j - i)
-                j -= 1
-            if res > ans: ans = res
-        return ans
+class Solution:
+    def myAtoi(self, s: str) -> int:
+        INT_MAX, INT_MIN = 2 ** 31 - 1, -2 ** 31
+        i, n = 0, len(s)
 
-lis=[1,8,6,2,5,4,8,3,7]
-res=Solution().maxArea(lis)
-print(res)
+        # Step 1: Skip leading whitespace
+        while i < n and s[i] == ' ':
+            i += 1
+
+        # Step 2: Check for optional sign
+        sign = 1
+        if i < n and s[i] == '-':
+            sign = -1
+            i += 1
+        elif i < n and s[i] == '+':
+            i += 1
+
+        # Step 3: Convert digits to integer
+        result = 0
+        while i < n and s[i].isdigit():
+            digit = int(s[i])
+            # Check for overflow
+            if result > (INT_MAX - digit) // 10:
+                return INT_MAX if sign == 1 else INT_MIN
+            result = result * 10 + digit
+            i += 1
+
+        return sign * result
+
+
+# Example usage
+solution = Solution()
+print(solution.myAtoi("123"))  # Output: 123
+print(solution.myAtoi("-123"))  # Output: -123
+print(solution.myAtoi("   +456   "))  # Output: 456
+print(solution.myAtoi("words and 987"))  # Output: 0
+print(solution.myAtoi("-91283472332"))  # Output: -2147483648 (due to overflow handling)
