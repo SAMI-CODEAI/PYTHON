@@ -1,37 +1,24 @@
+from typing import List
 class Solution:
-    def myAtoi(self, s: str) -> int:
-        INT_MAX, INT_MIN = 2 ** 31 - 1, -2 ** 31
-        i, n = 0, len(s)
-
-        # Step 1: Skip leading whitespace
-        while i < n and s[i] == ' ':
-            i += 1
-
-        # Step 2: Check for optional sign
-        sign = 1
-        if i < n and s[i] == '-':
-            sign = -1
-            i += 1
-        elif i < n and s[i] == '+':
-            i += 1
-
-        # Step 3: Convert digits to integer
-        result = 0
-        while i < n and s[i].isdigit():
-            digit = int(s[i])
-            # Check for overflow
-            if result > (INT_MAX - digit) // 10:
-                return INT_MAX if sign == 1 else INT_MIN
-            result = result * 10 + digit
-            i += 1
-
-        return sign * result
-
-
-# Example usage
-solution = Solution()
-print(solution.myAtoi("123"))  # Output: 123
-print(solution.myAtoi("-123"))  # Output: -123
-print(solution.myAtoi("   +456   "))  # Output: 456
-print(solution.myAtoi("words and 987"))  # Output: 0
-print(solution.myAtoi("-91283472332"))  # Output: -2147483648 (due to overflow handling)
+    def generateParenthesis(self, n: int) -> List[str]:
+# only add open paranthesis if open<n
+# only add a closing paranthesis if closed<open
+#valid IIF open==close==n
+        stack=[]
+        res=[]
+        def backtrack(openN,closedN):
+            if openN==closedN==n:
+                res.append("".join(stack))
+                return
+            if openN<n:
+                stack.append("(")
+                backtrack(openN+1,closedN)
+                stack.pop()
+            if closedN<openN:
+                stack.append(")")
+                backtrack(openN,closedN+1)
+                stack.pop()
+        backtrack(0,0)
+        return res
+sol = Solution()
+print(sol.generateParenthesis(3))
