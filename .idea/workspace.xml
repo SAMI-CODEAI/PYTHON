@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="259a1507-93be-4f22-8dda-107cc6fa64cf" name="Changes" comment="04-02-25-1">
+    <list default="true" id="259a1507-93be-4f22-8dda-107cc6fa64cf" name="Changes" comment="10-02-25-1">
+      <change afterPath="$PROJECT_DIR$/BASICS/GFGJobathon.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LEETCODE/Pract.py" beforeDir="false" afterPath="$PROJECT_DIR$/LEETCODE/Pract.py" afterDir="false" />
     </list>
@@ -48,6 +49,7 @@
   &quot;keyToString&quot;: {
     &quot;Python.ArrangeMap.executor&quot;: &quot;Run&quot;,
     &quot;Python.CountPress.executor&quot;: &quot;Run&quot;,
+    &quot;Python.GFGJobathon.executor&quot;: &quot;Debug&quot;,
     &quot;Python.HammingDistance.executor&quot;: &quot;Run&quot;,
     &quot;Python.KingKeykhosrowsMystery.executor&quot;: &quot;Run&quot;,
     &quot;Python.LinkedList.executor&quot;: &quot;Run&quot;,
@@ -75,7 +77,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.Pract">
-    <configuration name="ArrangeMap" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="GFGJobathon" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PYTHON" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -84,12 +86,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TCS-CODEVITA" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/BASICS" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TCS-CODEVITA/ArrangeMap.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BASICS/GFGJobathon.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -193,10 +195,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.Pract" />
+        <item itemvalue="Python.GFGJobathon" />
         <item itemvalue="Python.Practice" />
         <item itemvalue="Python.KingKeykhosrowsMystery" />
         <item itemvalue="Python.SegmentDisplay" />
-        <item itemvalue="Python.ArrangeMap" />
       </list>
     </recent_temporary>
   </component>
@@ -264,7 +266,17 @@
       <workItem from="1738859055150" duration="2932000" />
       <workItem from="1738923427104" duration="135000" />
       <workItem from="1739068862218" duration="4813000" />
-      <workItem from="1739208410777" duration="3401000" />
+      <workItem from="1739208410777" duration="3580000" />
+      <workItem from="1739292207138" duration="555000" />
+      <workItem from="1739347499255" duration="2002000" />
+      <workItem from="1739349952610" duration="665000" />
+      <workItem from="1739374379190" duration="1128000" />
+      <workItem from="1739673323511" duration="4475000" />
+      <workItem from="1739801949532" duration="1747000" />
+      <workItem from="1740149412172" duration="3590000" />
+      <workItem from="1740545373668" duration="18587000" />
+      <workItem from="1741791290212" duration="57000" />
+      <workItem from="1741791414090" duration="445000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <option name="closed" value="true" />
@@ -386,7 +398,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738687955566</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="10-02-25-1">
+      <option name="closed" value="true" />
+      <created>1739213460304</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1739213460304</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -417,19 +437,21 @@
     <MESSAGE value="31-01-25-1" />
     <MESSAGE value="3-0-25-1" />
     <MESSAGE value="04-02-25-1" />
-    <option name="LAST_COMMIT_MESSAGE" value="04-02-25-1" />
+    <MESSAGE value="10-02-25-1" />
+    <option name="LAST_COMMIT_MESSAGE" value="10-02-25-1" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/PYTHON$HammingDistance.coverage" NAME="HammingDistance Coverage Results" MODIFIED="1730958113405" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TCS-CODEVITA/MOCKVITA-2" />
     <SUITE FILE_PATH="coverage/PYTHON$LinkedList.coverage" NAME="LinkedList Coverage Results" MODIFIED="1731044841867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BASICS" />
-    <SUITE FILE_PATH="coverage/PYTHON$CountPress.coverage" NAME="CountPress Coverage Results" MODIFIED="1732883249519" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TCS-CODEVITA" />
-    <SUITE FILE_PATH="coverage/PYTHON$SegmentDisplay.coverage" NAME="SegmentDisplay Coverage Results" MODIFIED="1732901481977" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TCS-CODEVITA" />
     <SUITE FILE_PATH="coverage/PYTHON$Practice.coverage" NAME="Practice Coverage Results" MODIFIED="1732979875596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CODEFORCES" />
-    <SUITE FILE_PATH="coverage/PYTHON$ArrangeMap.coverage" NAME="ArrangeMap Coverage Results" MODIFIED="1732896691480" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TCS-CODEVITA" />
-    <SUITE FILE_PATH="coverage/PYTHON$StringObsession.coverage" NAME="StringObsession Coverage Results" MODIFIED="1732884171098" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TCS-CODEVITA" />
-    <SUITE FILE_PATH="coverage/PYTHON$Pract.coverage" NAME="Pract Coverage Results" MODIFIED="1739212705869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LEETCODE" />
+    <SUITE FILE_PATH="coverage/PYTHON$GFGJobathon.coverage" NAME="GFGJobathon Coverage Results" MODIFIED="1740547982944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BASICS" />
+    <SUITE FILE_PATH="coverage/PYTHON$Pract.coverage" NAME="Pract Coverage Results" MODIFIED="1741791416355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LEETCODE" />
     <SUITE FILE_PATH="coverage/PYTHON$KingKeykhosrowsMystery.coverage" NAME="KingKeykhosrowsMystery Coverage Results" MODIFIED="1732978156148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CODEFORCES" />
     <SUITE FILE_PATH="coverage/PYTHON$Plague2050.coverage" NAME="Plague2050 Coverage Results" MODIFIED="1732891919582" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TCS-CODEVITA" />
     <SUITE FILE_PATH="coverage/PYTHON$SequenceDetector.coverage" NAME="SequenceDetector Coverage Results" MODIFIED="1730825961739" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PYTHON$HammingDistance.coverage" NAME="HammingDistance Coverage Results" MODIFIED="1730958113405" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TCS-CODEVITA/MOCKVITA-2" />
+    <SUITE FILE_PATH="coverage/PYTHON$CountPress.coverage" NAME="CountPress Coverage Results" MODIFIED="1732883249519" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TCS-CODEVITA" />
+    <SUITE FILE_PATH="coverage/PYTHON$SegmentDisplay.coverage" NAME="SegmentDisplay Coverage Results" MODIFIED="1732901481977" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TCS-CODEVITA" />
+    <SUITE FILE_PATH="coverage/PYTHON$ArrangeMap.coverage" NAME="ArrangeMap Coverage Results" MODIFIED="1732896691480" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TCS-CODEVITA" />
+    <SUITE FILE_PATH="coverage/PYTHON$StringObsession.coverage" NAME="StringObsession Coverage Results" MODIFIED="1732884171098" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TCS-CODEVITA" />
   </component>
 </project>
